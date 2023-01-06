@@ -6,10 +6,10 @@ import gamescript
 fn main()
 {
 
-	Vector2 worldSize(20, 20);
-	Vector2 position(10, 10);
-	bool running = true;
-	std::string key;
+	worldSize := Vector2{20, 20};
+	mut position := Vector2{10, 10};
+	mut running := true;
+	mut key := "";
 
 	const char* player = "#";
 
@@ -37,19 +37,19 @@ fn main()
 		key = GetKey("Write up / w | down / s | left / a | right / d or exit or e to exit: ");
 
 
-		if (key == "up" || key == "u" || key == "w")
+		if key == "up" || key == "u" || key == "w"
 			position.y -= 1;
 
-		else if (key == "down" || key == "d" || key == "s")
+		else if key == "down" || key == "d" || key == "s"
 			position.y += 1;
 
-		else if (key == "left" || key == "l" || key == "a")
+		else if key == "left" || key == "l" || key == "a"
 			position.x -= 1;
 
-		else if (key == "right" || key == "r" || key == "d")
+		else if key == "right" || key == "r" || key == "d"
 			position.x += 1;
 
-		else if (key == "exit" || key == "e")
+		else if key == "exit" || key == "e"
 			running = false;
 
 		else

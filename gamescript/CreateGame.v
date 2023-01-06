@@ -1,10 +1,9 @@
-#include "CreateGame.h"
-#include <iostream>
-#include "Log.h"
+module gamescript
 
-void PaintGame(Vector2 Position, const char* Player, Vector2 WorldSize)
+
+fn PaintGame(Position vector2, Player string, WorldSize Vector2)
 {
-	std::cout << "Running Game..." << std::endl;
+	println("Running Game...")
 	std::cout << " ";
 	for (int k = 0; k < WorldSize.x; k++) {
 		std::cout << "___";
