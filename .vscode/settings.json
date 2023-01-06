@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "string": "cpp"
-    },
-    "makefile.makePath": "mingw32-make"
-}
