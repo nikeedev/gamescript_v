@@ -1,41 +1,41 @@
 module gamescript
 
-
-fn PaintGame(Position vector2, Player string, WorldSize Vector2)
+pub fn paint_game(position Vector2, player string, world_size Vector2)
 {
 	println("Running Game...")
-	std::cout << " ";
-	for (int k = 0; k < WorldSize.x; k++) {
-		std::cout << "___";
+	print(" ")
+	for k := 0; k < world_size.x; k++ {
+		print("___")
 	}
-	std::cout << "\n";
-	for (int j = 0; j < WorldSize.y; j++)
+	println("")
+	for j := 0; j < world_size.y; j++
 	{
-		std::cout << "|";
-		for (int i = 0; i < WorldSize.x; i++)
+		print("|")
+		for i := 0; i < world_size.x; i++
 		{
-			std::cout << "  ";
-			if (i == Position.x - 1)
+			print("  ")
+			if i == position.x - 1
 			{
-				if (j == Position.y)
+				if j == position.y
 				{
-					std::cout << Player;
+					print(player)
 				}
 				else {
-					std::cout << " ";
+					print(" ")
 				}
 			}
 			else {
-				std::cout << " ";
+				print(" ")
 			}
 		}
-		std::cout << "|";
-		if (!(j > WorldSize.y - 1))
-			std::cout << "\n";
+		print("|")
+		if !(j > world_size.y - 1) {
+			print("\n")
+		}
 	}
-	std::cout << " ";
-	for (int g = 0; g < WorldSize.x; g++) {
-		std::cout << "---";
+	print(" ")
+	for g := 0; g < world_size.x; g++ {
+		print("---")
 	}
-	std::cout << "\n";
+	println("")
 }

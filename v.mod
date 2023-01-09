@@ -1,5 +1,5 @@
 Module {
-	name: 'gamescript_v'
+	name: 'game'
 	description: ''
 	version: ''
 	license: ''

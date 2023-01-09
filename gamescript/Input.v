@@ -2,12 +2,12 @@ module gamescript
 
 import os
 
-fn GetKey(info string) string
+pub fn get_key(info string) string
 {
 	print(info + " ")
 
-	GotKey := os.get_line()
+	got_key := os.get_line()
 
-	return GotKey
+	return got_key
 }
 

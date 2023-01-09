@@ -1,9 +1,9 @@
 module gamescript
 
-struct Vector2
+pub struct Vector2
 {
-mut:
-	int x;
-	int y;
+pub mut:
+	x int
+	y int
 }
 
