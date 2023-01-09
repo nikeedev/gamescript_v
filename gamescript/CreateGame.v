@@ -1,8 +1,10 @@
 module gamescript
 
+import term
+
 pub fn paint_game(position Vector2, player string, world_size Vector2)
 {
-	println("Running Game...")
+	term.set_terminal_title(term.header("Gamescript", "-"))
 	print(" ")
 	for k := 0; k < world_size.x; k++ {
 		print("___")
@@ -18,7 +20,7 @@ pub fn paint_game(position Vector2, player string, world_size Vector2)
 			{
 				if j == position.y
 				{
-					print(player)
+					print(term.hex(0x64ff1c, player))
 				}
 				else {
 					print(" ")

@@ -2,19 +2,23 @@ module main
 
 import gamescript
 import os
+import term
 
 fn main()
 {
 
-	world_size := gamescript.Vector2{20, 20}
+	mut world_size := gamescript.Vector2{20, 20}
 	mut position := gamescript.Vector2{10, 10}
 	mut key := ""
 	mut running := false
-
+	screen_size := term.get_terminal_size()
 	player := "#"
+
+	world_size = gamescript.Vector2{screen_size[0], screen_size[1]}
+
 	os.execute("cls")
 	for running != true {
-		os.execute("cls")
+		term.clear()
 		if position.y <= -1 {
 			position.y += 1
 		}
