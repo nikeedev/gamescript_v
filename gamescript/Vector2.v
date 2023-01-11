@@ -7,3 +7,6 @@ pub mut:
 	y int
 }
 
+pub fn (vec Vector2) print() {
+	print("x: $vec.x, y: $vec.y")
+}

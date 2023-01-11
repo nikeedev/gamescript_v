@@ -1,23 +1,19 @@
 module main
 
 import gamescript
-import os
 import term
 
 fn main()
 {
 
-	mut world_size := gamescript.Vector2{20, 20}
-	mut position := gamescript.Vector2{10, 10}
+	mut world_size := gamescript.Vector2{40, 40}
+	mut position := gamescript.Vector2{20, 20}
 	mut key := ""
-	mut running := false
-	screen_size := term.get_terminal_size()
+	mut running := true
 	player := "#"
 
-	world_size = gamescript.Vector2{screen_size[0], screen_size[1]}
 
-	os.execute("cls")
-	for running != true {
+	for running == true {
 		term.clear()
 		if position.y <= -1 {
 			position.y += 1
@@ -42,7 +38,7 @@ fn main()
 		)
 
 		println("")
-		println("X: $position.x, Y: $position.y")
+		position.print()
 		println("")
 
 		key = gamescript.get_key("Write up / w | down / s | left / a | right / d or exit or e to exit: ")
