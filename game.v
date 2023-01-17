@@ -60,7 +60,7 @@ fn main()
 			position.x += 1
 		}
 		else if key == "exit" || key == "e" {
-			running = true
+			running = false
 		}
 		else {
 			continue
